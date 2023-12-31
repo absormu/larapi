@@ -10,8 +10,15 @@ class Contact extends Model
     protected $table = "contacts";
     protected $primaryKey = "id";
     protected $keyType = "int";
-    protected $timestamps = true;
-    protected $incrementing = true;
+    public  $timestamps = true;
+    public  $incrementing = true;
+
+    protected $fillable = [
+        'first_name',
+        'last_name',
+        'email',
+        'phone',
+    ];
 
     public function users(): BelongsTo
     {
